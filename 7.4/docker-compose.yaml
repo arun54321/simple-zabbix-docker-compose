@@ -11,7 +11,7 @@ services:
       - zabbix-net
 
   zabbix-server:
-    image: zabbix/zabbix-server-pgsql:trunk-ubuntu
+    image: zabbix/zabbix-server-pgsql:ubuntu-7.4-latest
     container_name: zabbix-server
     restart: unless-stopped
     depends_on:
@@ -27,7 +27,7 @@ services:
       - zabbix-net
 
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-pgsql:trunk-ubuntu
+    image: zabbix/zabbix-web-nginx-pgsql:ubuntu-7.4-latest
     container_name: zabbix-web
     restart: unless-stopped
     depends_on:
@@ -45,7 +45,7 @@ services:
       - zabbix-net
 
   zabbix-agent2:
-    image: zabbix/zabbix-agent2:trunk-ubuntu
+    image: zabbix/zabbix-agent2:ubuntu-7.4-latest
     container_name: zabbix-agent2
     restart: unless-stopped
     depends_on:
