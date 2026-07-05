@@ -6,7 +6,7 @@ services:
     env_file:
       - env.postgres
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql
     networks:
       - zabbix-net
 
